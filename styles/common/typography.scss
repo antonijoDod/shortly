@@ -1,0 +1,33 @@
+@use "../mixins/mixins";
+
+h1,
+h2,
+h3 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    @include mixins.desktop {
+        font-size: 5rem;
+        line-height: 5.625rem;
+    }
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    @include mixins.tablet {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+p {
+    font-size: 0.93rem;
+    line-height: 2rem;
+}

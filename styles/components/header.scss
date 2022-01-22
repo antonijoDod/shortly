@@ -1,0 +1,134 @@
+@use "../mixins/mixins";
+@use "../abstract/colors";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    &__desktop {
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        display: none;
+        @include mixins.laptop {
+            display: flex;
+        }
+    }
+
+    &__brand {
+        margin-right: 3rem;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+    &__item {
+        padding: 0.5rem;
+        color: colors.$text;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            transition: all 300ms linear;
+            color: colors.$dark;
+        }
+    }
+    &__link {
+        padding: 0.4rem 0.8rem;
+    }
+    &__action {
+        &--login {
+            border: 0;
+            background: transparent;
+            padding: 0.8rem 1.5rem;
+            color: colors.$text;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 1rem;
+            &:hover {
+                transition: all 300ms linear;
+                color: colors.$dark;
+            }
+        }
+        &--signup {
+            border: 0;
+            padding: 0.8rem 1.5rem;
+            border-radius: 28px;
+            font-size: 0.94rem;
+            background-color: colors.$primary;
+            color: colors.$light;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover {
+                transition: all 300ms linear;
+                opacity: 0.8;
+            }
+        }
+    }
+    &__mobile {
+        @include mixins.laptop {
+            display: none;
+        }
+    }
+}
+
+.mobile {
+    &__hamburger {
+        cursor: pointer;
+        padding: 0.3rem;
+    }
+    &__bars {
+        height: 4px;
+        width: 30px;
+        background-color: colors.$text;
+        border-radius: 4px;
+        margin-top: 0.4rem;
+    }
+    &__menu {
+        margin-top: 1.4rem;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        box-sizing: border-box;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.1s linear;
+        &--hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.1s linear;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        text-align: center;
+        background-color: colors.$secondary;
+        border-radius: 10px;
+    }
+    &__link {
+        display: inline-block;
+        padding: 1rem 0;
+        font-weight: bold;
+        color: colors.$light;
+        text-decoration: none;
+        font-size: 1.25rem;
+        &--first {
+            margin-top: 2rem;
+        }
+        &--last {
+            margin-bottom: 2rem;
+        }
+        &--signup {
+            background-color: colors.$primary;
+            width: 90%;
+            border-radius: 28px;
+        }
+    }
+    &__divider {
+        width: 90%;
+        margin: 1rem auto;
+        height: 1px;
+        background-color: colors.$purple-light;
+    }
+}
