@@ -72,8 +72,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  height: 7rem;
 }
 .header__desktop {
   align-items: center;
@@ -155,13 +154,14 @@ p {
   width: 100%;
   left: 0;
   box-sizing: border-box;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s, opacity 0.1s linear;
-}
-.mobile__menu--hidden {
   visibility: hidden;
   opacity: 0;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+.mobile__menu--visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
   transition: visibility 0s, opacity 0.1s linear;
 }
 .mobile__list {
@@ -197,13 +197,17 @@ p {
 }
 .hero {
   width: 100%;
-  height: calc(100vh - 8rem);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 600px) {
+  .hero {
+    height: calc(100vh - 7rem);
+  }
 }
 .hero__inner {
   display: flex;
@@ -223,6 +227,7 @@ p {
 @media (min-width: 900px) {
   .hero__content {
     width: 60%;
+    text-align: left;
   }
 }
 .hero__description {
@@ -239,23 +244,68 @@ p {
   border-radius: 1.75rem;
 }
 .hero__media {
-  width: 100%;
+  width: 140%;
 }
 @media (min-width: 900px) {
   .hero__media {
     width: 40%;
-    height: 100%;
-    position: relative;
+    position: absolute;
+    right: 0;
+    margin-right: -100px;
   }
 }
 .hero__image {
-  width: 140%;
+  height: 100%;
+}
+.form {
+  background-color: #9e9aa8;
+  position: relative;
+  margin-top: 2rem;
+}
+.form__inner {
+  position: relative;
+  top: -4rem;
+}
+.form__top {
+  background-image: url("bg-shorten-desktop.ce53576e.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #3a3054;
+  padding: 3rem 4rem;
+  border-radius: 0.7rem;
+}
+.form__field {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  margin-right: 1.3rem;
+  border: 0;
+  border-radius: 0.625rem;
+}
+.form__button {
+  padding: 1rem 3rem;
+  border-radius: 0.625rem;
+  background-color: #2bd0d0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0;
+  color: #eff1f7;
+}
+.form__list {
+  margin-top: 1rem;
+  list-style-type: none;
+}
+.form__item {
+  background-color: #eff1f7;
+  margin-bottom: 1rem;
+  padding: 1rem 1.375rem;
+  border-radius: 0.4rem;
 }
 @media (min-width: 900px) {
-  .hero__image {
-    position: absolute;
-    top: 0;
-    right: -100px;
+  .form__item {
+    display: flex;
+    justify-content: space-between;
   }
 }
 /*# sourceMappingURL=index.3cc4c8dc.css.map */

@@ -1,17 +1,17 @@
-@use "../mixins/mixins";
+@use "../mixins/breakpoints";
 
 .container {
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;
     box-sizing: border-box;
-    @include mixins.tablet {
+    @include breakpoints.tablet {
         width: 600px;
     }
-    @include mixins.laptop {
+    @include breakpoints.laptop {
         width: 900px;
     }
-    @include mixins.desktop {
+    @include breakpoints.desktop {
         width: 1100px;
     }
 }

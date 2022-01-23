@@ -1,19 +1,21 @@
-@use "../mixins/mixins";
+@use "../mixins/breakpoints";
 @use "../abstract/colors";
 
 .hero {
     width: 100%;
-    height: calc(100vh - 8rem);
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include breakpoints.tablet {
+        height: calc(100vh - 7rem);
+    }
     &__inner {
         display: flex;
         flex-direction: column-reverse;
-        @include mixins.laptop {
+        @include breakpoints.laptop {
             flex-direction: row;
             align-items: center;
         }
@@ -22,8 +24,9 @@
         width: 100%;
         margin-top: 2.5rem;
         text-align: center;
-        @include mixins.laptop {
+        @include breakpoints.laptop {
             width: 60%;
+            text-align: left;
         }
     }
     &__description {
@@ -40,19 +43,15 @@
         border-radius: 1.75rem;
     }
     &__media {
-        width: 100%;
-        @include mixins.laptop {
+        width: 140%;
+        @include breakpoints.laptop {
             width: 40%;
-            height: 100%;
-            position: relative;
+            position: absolute;
+            right: 0;
+            margin-right: -100px;
         }
     }
     &__image {
-        width: 140%;
-        @include mixins.laptop {
-            position: absolute;
-            top: 0;
-            right: -100px;
-        }
+        height: 100%;
     }
 }

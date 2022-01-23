@@ -1,4 +1,4 @@
-@use "../mixins/mixins";
+@use "../mixins/breakpoints";
 
 h1,
 h2,
@@ -9,7 +9,7 @@ h3 {
 h1 {
     font-size: 2.625rem;
     line-height: 3rem;
-    @include mixins.desktop {
+    @include breakpoints.desktop {
         font-size: 5rem;
         line-height: 5.625rem;
     }
@@ -18,7 +18,7 @@ h1 {
 h2 {
     font-size: 1.75rem;
     line-height: 3rem;
-    @include mixins.tablet {
+    @include breakpoints.tablet {
         font-size: 2.5rem;
     }
 }
