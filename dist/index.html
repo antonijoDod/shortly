@@ -89,36 +89,41 @@
         <div class="form__inner container">
           <div class="form__top">
             <form id="form" class="form__element">
-              <input class="form__field" name="enteredUrl" type="text" placeholder="Shorten a link here...">
+              <input class="form__input" name="enteredUrl" type="text" placeholder="Shorten a link here...">
               <input class="form__button" type="submit" value="Shorten It!">
             </form>
           </div>
           <ul class="form__list">
             <li class="form__item">
               <a class="form__left">https://www.frontendmentor.io</a>
+              <div class="form__divider"></div>
               <div class="form__right">
                 <a href="https://rel.ink/k4lKyk" class="form__link">https://rel.ink/k4lKyk</a>
-                <button class="form__action">Copy</button>
+                <button onclick="handleButtonCopy()" class="form__action form__action--copied" value="First value">
+                  Copy
+                </button>
               </div>
             </li>
             <li class="form__item">
               <a class="form__left">https://www.frontendmentor.io</a>
               <div class="form__right">
                 <a href="https://rel.ink/k4lKyk" class="form__link">https://rel.ink/k4lKyk</a>
-                <button class="form__action">Copy</button>
+                <button class="form__action" value="Second value">Copy</button>
               </div>
             </li>
             <li class="form__item">
               <a class="form__left">https://www.frontendmentor.io</a>
               <div class="form__right">
                 <a href="https://rel.ink/k4lKyk" class="form__link">https://rel.ink/k4lKyk</a>
-                <button class="form__action">Copy</button>
+                <button class="form__action" value="Value from third button">
+                  Copy
+                </button>
               </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <script src="/index.fbb3188c.js" defer=""></script>
+    <script src="/index.72be8890.js"></script>
   </body>
 </html>

@@ -1,17 +1,15 @@
-@use "../mixins/breakpoints";
-
 .container {
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;
     box-sizing: border-box;
-    @include breakpoints.tablet {
+    @include tablet {
         width: 600px;
     }
-    @include breakpoints.laptop {
+    @include laptop {
         width: 900px;
     }
-    @include breakpoints.desktop {
+    @include desktop {
         width: 1100px;
     }
 }

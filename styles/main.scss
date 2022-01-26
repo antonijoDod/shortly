@@ -1,7 +1,11 @@
-@use "./common/global.scss";
-@use "./common/container.scss";
-@use "./common/typography.scss";
+@import "./abstract/colors";
+@import "./mixins/breakpoints";
+@import "./common/container.scss";
+@import "./common/global.scss";
+@import "./common/global.scss";
+@import "./common/container.scss";
+@import "./common/typography.scss";
 
-@use "./components/header.scss";
-@use "./components/hero.scss";
-@use "./components/form.scss";
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/form.scss";

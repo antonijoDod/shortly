@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- ############################ 
+                      HEADER
+         ############################ -->
+    <header class="header container">
+      <a href="">
+        <img class="header__brand" src="../images/logo.svg" alt="Shorty logo" />
+      </a>
+      <div class="header__desktop">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link">Features</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link">Pricing</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link">Resources</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__action">
+          <button class="header__action--login">Login</button>
+          <button class="header__action--signup">Sign up</button>
+        </div>
+      </div>
+      <div class="header__mobile">
+        <div class="mobile__hamburger mobile__hamburger--hidden">
+          <div class="mobile__bars"></div>
+          <div class="mobile__bars"></div>
+          <div class="mobile__bars"></div>
+        </div>
+        <nav class="mobile__menu">
+          <ul class="mobile__list mobile__list container">
+            <li class="mobile__item">
+              <a class="mobile__link mobile__link--first" href="#">Features</a>
+            </li>
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Pricing</a>
+            </li>
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Resources</a>
+            </li>
+            <div class="mobile__divider"></div>
+            <li class="mobile__item">
+              <a class="mobile__link mobile__link--login" href="#">Login</a>
+            </li>
+            <li class="mobile__item">
+              <a
+                class="mobile__link mobile__link--signup mobile__link--last"
+                href="#"
+                >Sign up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Features
-  Pricing
-  Resources
-
-  Login
-  Sign Up
-
-  More than just shorter links
-
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
-
-  Get Started
-  
-  Shorten a link here...
-
-  Shorten It!
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <main>
+      <!-- ###########################
+                      HERO
+          ############################ -->
+      <section class="hero">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <h1 class="hero__title">More than just shorter links</h1>
+            <p class="hero__description">
+              Build your brand’s recognition and get detailed insights on how
+              your links are performing.
+            </p>
+            <button class="hero__button">Get started</button>
+          </div>
+          <div class="hero__media">
+            <img
+              class="hero__image"
+              src="../images/illustration-working.svg"
+              alt="Working illustration"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- ############################ 
+                      FORM
+        ############################ -->
+      <section class="form">
+        <div class="form__inner container">
+          <div class="form__top">
+            <form id="form" class="form__element">
+              <input
+                class="form__input"
+                name="enteredUrl"
+                type="text"
+                placeholder="Shorten a link here..."
+              />
+              <input class="form__button" type="submit" value="Shorten It!" />
+            </form>
+          </div>
+          <ul class="form__list"></ul>
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

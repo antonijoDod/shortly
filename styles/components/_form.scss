@@ -1,0 +1,110 @@
+.form {
+    background-color: $light;
+    position: relative;
+    margin-top: 8rem;
+    @include desktop {
+        margin-top: 0rem;
+    }
+    &__inner {
+        position: relative;
+        top: -4rem;
+    }
+    &__top {
+        background-image: url("../images/bg-shorten-desktop.svg");
+        background-position: center;
+        background-size: cover;
+        background-color: $purple-dark;
+        padding: 3rem 4rem;
+        border-radius: 0.7rem;
+    }
+    &__element {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        @include laptop {
+            flex-direction: row;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+        margin-right: 1.3rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-radius: 0.625rem;
+        @include laptop {
+            margin-bottom: 0rem;
+        }
+    }
+    &__button {
+        padding: 1rem 3rem;
+        border-radius: 0.625rem;
+        background-color: $primary;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: 0;
+        color: #fff;
+    }
+    &__list {
+        margin-top: 1rem;
+        list-style-type: none;
+    }
+    &__item {
+        background-color: #fff;
+        margin-bottom: 1rem;
+        padding: 1rem 1.375rem;
+        border-radius: 0.4rem;
+        @include laptop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__divider {
+        width: 100%;
+        left: 0;
+        margin: 1rem 0;
+        height: 1px;
+        background-color: $light;
+        @include laptop {
+            display: none;
+        }
+    }
+    &__left {
+        color: $dark;
+    }
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include laptop {
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $primary;
+        margin-right: 1.25rem;
+    }
+    &__action {
+        margin-top: 1rem;
+        border: 0;
+        border-radius: 0.4rem;
+        padding: 1rem;
+        background-color: $primary;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        @include laptop {
+            margin-top: 0;
+        }
+        &--copied {
+            background-color: $purple-dark;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
